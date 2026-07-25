@@ -182,3 +182,42 @@ img,iframe,video,svg{max-width:100%;height:auto}
   .hero-copy{padding-right:38%}
   .hero-visual{width:40%;max-width:40%}
 }
+
+/* Desktop layout restoration after mobile overflow fixes */
+@media (min-width: 801px) {
+  .section-inner,
+  .contact-inner {
+    width: 100%;
+    max-width: var(--max);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .concept-grid,
+  .card-grid,
+  .character-list,
+  .flow-grid,
+  .embed-intro,
+  .embed-shell,
+  .contact-actions {
+    min-width: 0;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+  }
+
+  .hero-copy,
+  .hero-visual {
+    min-width: 0;
+  }
+
+  .concept-grid {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.35fr);
+  }
+
+  .concept-art {
+    width: 100%;
+    max-width: 100%;
+  }
+}
