@@ -1,150 +1,122 @@
 ---
+import { siteConfig, normalizeUrl } from "../config/site";
 import { characters } from "../config/characters";
-import { normalizeUrl, siteConfig } from "../config/site";
 
 const bookingUrl = normalizeUrl(siteConfig.bookingUrl);
 const inquiryUrl = normalizeUrl(siteConfig.inquiryUrl);
+const hasCharacters = characters.length > 0;
+const heroImage = hasCharacters ? characters[0].image : "/assets/images/hero-coming-soon.png";
+const heroAlt = hasCharacters ? characters[0].alt : "VTuber相談員 Coming Soon";
 ---
 <main id="top">
-    <section class="hero">
-      <div class="sky-cloud cloud-a"></div><div class="sky-cloud cloud-b"></div><div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
-      <div class="hero-city" aria-hidden="true"></div>
-      <div class="hero-copy reveal">
-        <h1><span>VTuberと話しながら、</span><strong>理想の住まい探し</strong></h1>
-        <p>東京の住まい探しを、オンラインで気軽に。VTuber相談員が、あなたの希望に寄り添いながら物件選びをサポートします。</p>
-        <div class="hero-actions"><a class="button primary" href="#contact">オンライン相談を予約する</a><a class="button secondary" href="#flow">サービスの流れを見る</a></div>
-      </div>
-      <div class="hero-visual reveal delay-1"><img src="/assets/images/hero-character.png" alt="東京の街を案内するVTuber相談員のイメージ" /></div>
-      <a class="scroll" href="#concept">SCROLL<span>⌄</span></a>
-      <div class="wave wave-hero" aria-hidden="true"></div>
-    </section>
+  <section class="hero">
+    <div class="sky-cloud cloud-a"></div><div class="sky-cloud cloud-b"></div><div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
+    <div class="hero-city" aria-hidden="true"></div>
+    <div class="hero-copy reveal">
+      <h1><span>VTuberと話しながら、</span><strong>理想の住まい探し</strong></h1>
+      <p class="hero-lead"><span>東京の住まい探しを、オンラインで気軽に。</span><span>VTuber相談員が、あなたの希望に寄り添いながら物件選びをサポートします。</span></p>
+      <div class="hero-actions"><a class="button primary" href="#booking">オンライン相談を予約する</a><a class="button secondary" href="#flow">サービスの流れを見る</a></div>
+    </div>
+    <div class={`hero-visual reveal delay-1 ${!hasCharacters ? "is-coming-soon" : ""}`}><img src={heroImage} alt={heroAlt} /></div>
+    <a class="scroll" href="#concept">SCROLL<span>⌄</span></a>
+  </section>
 
-    <section id="concept" class="section concept">
-      <div class="section-inner concept-grid">
-        <div class="section-copy reveal">
-          <p class="outline-title">CONCEPT</p>
-          <h2>不動産は、<br />もっと<span>わかりやすく</span>ていい。</h2>
-          <p>店舗へ行く前のちょっとした相談から、希望条件の整理、エリア選びまで。VTuberと会話しながら、あなたのペースで住まい探しを始められます。</p>
-          <a class="line-button" href="#services">詳しく見る <span>›</span></a>
-        </div>
-        <div class="concept-art reveal delay-1"><img src="/assets/images/concept-city.jpg" alt="空と水辺の東京の街並み" /><span class="tokyo-label">TOKYO</span><div class="mini-ui ui-a">物件相談</div><div class="mini-ui ui-b">エリア相談</div><div class="mini-ui ui-c">暮らしの相談</div></div>
+  <section id="concept" class="section concept">
+    <div class="section-inner concept-grid">
+      <div class="section-copy reveal">
+        <p class="outline-title">CONCEPT</p>
+        <h2>不動産は、<br />もっと<span>わかりやすく</span>ていい。</h2>
+        <p>店舗へ行く前のちょっとした相談から、希望条件の整理、エリア選びまで。<br />VTuberと会話しながら、あなたのペースで住まい探しを始められます。</p>
+        <a class="line-button" href="#services">詳しく見る <span>›</span></a>
       </div>
-      <div class="wave wave-section" aria-hidden="true"></div>
-    </section>
+      <div class="concept-art reveal delay-1"><img src="/assets/images/concept-city.jpg" alt="空と水辺の東京の街並み" /></div>
+    </div>
+  </section>
 
-    <section id="services" class="section services">
-      <div class="section-inner">
-        <div class="section-heading reveal"><p class="outline-title">CONTENTS</p><span>ご相談できること</span></div>
-        <div class="card-grid">
-          <article class="content-card reveal"><img src="/assets/images/card-property.jpg" alt="明るい室内" /><div><small>PROPERTY</small><h3>物件相談</h3><p>賃貸・購入のご希望や、気になる物件について相談できます。</p></div></article>
-          <article class="content-card reveal delay-1"><img src="/assets/images/card-area.jpg" alt="東京の街並み" /><div><small>AREA</small><h3>街・エリア相談</h3><p>通勤、暮らしやすさ、周辺環境から候補エリアを整理します。</p></div></article>
-          <article class="content-card reveal delay-2"><img src="/assets/images/card-knowledge.jpg" alt="住まい探しの資料" /><div><small>CONDITION</small><h3>条件整理</h3><p>家賃、間取り、設備など、優先順位を一緒に明確にします。</p></div></article>
-          <article class="content-card reveal delay-3"><img src="/assets/images/card-live.jpg" alt="オンライン接客設備" /><div><small>ONLINE</small><h3>リモート相談</h3><p>顔出し不要。スマートフォンやPCから気軽に参加できます。</p></div></article>
-        </div>
-        <div class="center"><a class="line-button" href="#contact">オンライン相談について見る <span>›</span></a></div>
+  <section id="services" class="section services">
+    <div class="section-inner">
+      <div class="section-heading reveal"><p class="outline-title">CONTENTS</p><span>ご相談できること</span></div>
+      <div class="card-grid">
+        <article class="content-card reveal"><img src="/assets/images/card-property.jpg" alt="明るい室内" /><div><small>PROPERTY</small><h3>物件相談</h3><p>賃貸・購入のご希望や、気になる物件について相談できます。</p></div></article>
+        <article class="content-card reveal delay-1"><img src="/assets/images/card-area.jpg" alt="東京の街並み" /><div><small>AREA</small><h3>街・エリア相談</h3><p>通勤、暮らしやすさ、周辺環境から候補エリアを整理します。</p></div></article>
+        <article class="content-card reveal delay-2"><img src="/assets/images/card-knowledge.jpg" alt="住まい探しの資料" /><div><small>CONDITION</small><h3>条件整理</h3><p>家賃、間取り、設備など、優先順位を一緒に明確にします。</p></div></article>
+        <article class="content-card reveal delay-3"><img src="/assets/images/card-live.jpg" alt="オンライン接客設備" /><div><small>ONLINE</small><h3>リモート相談</h3><p>顔出し不要。スマートフォンやPCから気軽に参加できます。</p></div></article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="character" class="section character-section">
-      <div class="section-inner">
-        <div class="section-heading reveal"><p class="outline-title">CHARACTER</p><span>キャラクター紹介</span></div>
-        {characters.length === 0 ? (
-          <div class="character-coming-soon reveal" role="status">
-            <span class="coming-soon-label">Coming Soon</span>
-            <h2>VTuber相談員は現在準備中です</h2>
-            <p>キャラクターの情報は、本格始動にあわせて公開予定です。</p>
-          </div>
-        ) : (
+  <section id="character" class="section character-section">
+    <div class="section-inner">
+      <div class="section-heading reveal"><p class="outline-title">CHARACTER</p><span>キャラクター紹介</span></div>
+      {hasCharacters ? (
         <div class="character-list">
           {characters.map((character, index) => {
-            const xUrl = normalizeUrl(character.socials?.x);
-            const youtubeUrl = normalizeUrl(character.socials?.youtube);
-            const instagramUrl = normalizeUrl(character.socials?.instagram);
-            const hasSocials = Boolean(xUrl || youtubeUrl || instagramUrl);
-
+            const socialLinks = [
+              { label: "X", url: normalizeUrl(character.socials?.x || ""), mark: "X" },
+              { label: "YouTube", url: normalizeUrl(character.socials?.youtube || ""), mark: "▶" },
+              { label: "Instagram", url: normalizeUrl(character.socials?.instagram || ""), mark: "◎" },
+            ].filter((item) => item.url);
             return (
               <article class={`character-card reveal ${index ? `delay-${Math.min(index, 3)}` : ""}`}>
-                <div class="character-image">
-                  <img src={character.image} alt={character.alt} loading="lazy" />
-                </div>
+                <div class="character-image"><img src={character.image} alt={character.alt} /></div>
                 <div class="character-copy">
                   <p class="character-role">{character.roleLabel}</p>
                   <h2>{character.name} <small>（{character.reading}）</small></h2>
-                  <dl>
-                    <div><dt>役割</dt><dd>{character.role}</dd></div>
-                    <div><dt>特徴</dt><dd>{character.feature}</dd></div>
-                    <div><dt>相談内容</dt><dd>{character.consultation}</dd></div>
-                  </dl>
-                  {hasSocials && (
-                    <div class="profile-social" aria-label={`${character.name}のSNS`}>
-                      {xUrl && <a href={xUrl} target="_blank" rel="noopener noreferrer" aria-label={`${character.name}のX`}>X</a>}
-                      {youtubeUrl && <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label={`${character.name}のYouTube`}>▶</a>}
-                      {instagramUrl && <a href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label={`${character.name}のInstagram`}>◎</a>}
-                    </div>
-                  )}
+                  <dl><div><dt>役割</dt><dd>{character.role}</dd></div><div><dt>特徴</dt><dd>{character.feature}</dd></div><div><dt>相談内容</dt><dd>{character.consultation}</dd></div></dl>
+                  {socialLinks.length > 0 && <div class="profile-social">{socialLinks.map((item) => <a href={item.url} target="_blank" rel="noopener noreferrer" aria-label={item.label}>{item.mark}</a>)}</div>}
                 </div>
               </article>
             );
           })}
         </div>
-        )}
-      </div>
-    </section>
+      ) : (
+        <div class="coming-soon-panel character-coming-soon reveal"><small>VTUBER CONCIERGE</small><strong>Coming Soon</strong><span>VTuber相談員は現在準備中です。キャラクター情報は本格始動にあわせて公開予定です。</span></div>
+      )}
+    </div>
+  </section>
 
-    <section id="flow" class="section flow-section">
-      <div class="section-inner">
-        <div class="section-heading reveal"><p class="outline-title">FLOW</p><span>ご相談の流れ</span></div>
-        <div class="flow-grid">
-          <article class="flow-item reveal"><b>01</b><div class="flow-icon">▣</div><h3>相談予約</h3><p>フォームから希望日時と相談内容を送信。</p></article>
-          <article class="flow-item reveal delay-1"><b>02</b><div class="flow-icon">▤</div><h3>オンライン相談</h3><p>VTuber相談員が条件や悩みをヒアリング。</p></article>
-          <article class="flow-item reveal delay-2"><b>03</b><div class="flow-icon">⌂</div><h3>物件提案</h3><p>条件に合う物件とエリアをご案内。</p></article>
-          <article class="flow-item reveal delay-3"><b>04</b><div class="flow-icon">◇</div><h3>内見・契約支援</h3><p>不動産担当者が実務手続きをサポート。</p></article>
-        </div>
+  <section id="flow" class="section flow-section">
+    <div class="section-inner">
+      <div class="section-heading reveal"><p class="outline-title">FLOW</p><span>ご相談の流れ</span></div>
+      <div class="flow-grid">
+        <article class="flow-item reveal"><b>01</b><div class="flow-icon">▣</div><h3>相談予約</h3><p>フォームから希望日時と相談内容を送信。</p></article>
+        <article class="flow-item reveal delay-1"><b>02</b><div class="flow-icon">▤</div><h3>オンライン相談</h3><p>VTuber相談員が条件や悩みをヒアリング。</p></article>
+        <article class="flow-item reveal delay-2"><b>03</b><div class="flow-icon">⌂</div><h3>物件提案</h3><p>条件に合う物件とエリアをご案内。</p></article>
+        <article class="flow-item reveal delay-3"><b>04</b><div class="flow-icon">◇</div><h3>内見・契約支援</h3><p>不動産担当者が実務手続きをサポート。</p></article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="booking" class="section embed-section booking-section">
-      <div class="section-inner">
-        <div class="section-heading reveal"><p class="outline-title">BOOKING</p><span>オンライン相談予約</span></div>
-        <div class="embed-intro reveal">
-          <div><h2>空いている日時から、そのまま予約</h2><p>Googleカレンダーの予約ページから、ご都合のよい日時を選択できます。</p></div>
-        </div>
-        <div id="booking-frame" class={`embed-shell reveal ${bookingUrl ? "is-ready" : ""}`}>
-          {bookingUrl ? (
-            <iframe class="embed-frame" src={bookingUrl} title="オンライン相談予約カレンダー" loading="lazy"></iframe>
-          ) : (
-            <div class="coming-soon-panel" role="status">
-              <small>ONLINE BOOKING</small><strong>Coming Soon</strong><span>オンライン相談予約は、サービス本格始動時に公開予定です。</span>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
+  <section id="booking" class="section embed-section booking-section">
+    <div class="section-inner">
+      <div class="section-heading reveal"><p class="outline-title">BOOKING</p><span>オンライン相談予約</span></div>
+      {bookingUrl ? (
+        <div class="embed-shell reveal is-ready"><iframe class="embed-frame" src={bookingUrl} title="オンライン相談予約カレンダー" loading="lazy"></iframe></div>
+      ) : (
+        <div class="coming-soon-panel reveal"><small>ONLINE BOOKING</small><strong>Coming Soon</strong><span>オンライン相談予約は、サービス本格始動時に公開予定です。</span></div>
+      )}
+    </div>
+  </section>
 
-    <section id="inquiry" class="section embed-section inquiry-section">
-      <div class="section-inner">
-        <div class="section-heading reveal"><p class="outline-title">INQUIRY</p><span>オンラインお問い合わせ</span></div>
-        <div class="embed-intro reveal"><div><h2>日時未定のご相談はこちら</h2><p>物件条件やエリアについて、Googleフォームから気軽にお問い合わせいただけます。</p></div></div>
-        <div class={`embed-shell form-shell reveal ${inquiryUrl ? "is-ready" : ""}`}>
-          {inquiryUrl ? (
-            <iframe class="embed-frame" src={inquiryUrl} title="オンラインお問い合わせフォーム" loading="lazy"></iframe>
-          ) : (
-            <div class="coming-soon-panel" role="status">
-              <small>ONLINE INQUIRY</small><strong>Coming Soon</strong><span>オンラインお問い合わせは、サービス本格始動時に公開予定です。</span>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
+  <section id="inquiry" class="section embed-section inquiry-section">
+    <div class="section-inner">
+      <div class="section-heading reveal"><p class="outline-title">INQUIRY</p><span>オンラインお問い合わせ</span></div>
+      {inquiryUrl ? (
+        <div class="embed-shell form-shell reveal is-ready"><iframe class="embed-frame" src={inquiryUrl} title="オンラインお問い合わせフォーム" loading="lazy"></iframe></div>
+      ) : (
+        <div class="coming-soon-panel reveal"><small>ONLINE INQUIRY</small><strong>Coming Soon</strong><span>オンラインお問い合わせは、サービス本格始動時に公開予定です。</span></div>
+      )}
+    </div>
+  </section>
 
-    <section id="contact" class="contact-section">
-      <div class="contact-inner reveal">
-        <div><p class="outline-title light">CONTACT</p><h2>まずは気軽にご相談ください</h2><p>予約・お問い合わせ機能は本格始動時に公開予定です。</p></div>
-        <div class="contact-actions">
-          <a class="button white" href="#booking">オンライン相談を予約する</a>
-          <a class="button ghost-white" href="#inquiry">オンラインで問い合わせる</a>
-        </div>
+  <section id="contact" class="contact-section">
+    <div class="contact-inner reveal">
+      <div><p class="outline-title light">CONTACT</p><h2>まずは気軽にご相談ください</h2><p>{bookingUrl || inquiryUrl ? "日時を選んで予約するか、フォームからお問い合わせください。" : "予約・お問い合わせ機能は本格始動時に公開予定です。"}</p></div>
+      <div class="contact-actions">
+        <a class={`button white ${!bookingUrl ? "is-coming-soon" : ""}`} href="#booking">{bookingUrl ? "オンライン相談を予約する" : "相談予約"}</a>
+        <a class={`button ghost-white ${!inquiryUrl ? "is-coming-soon" : ""}`} href="#inquiry">{inquiryUrl ? "オンラインで問い合わせる" : "お問い合わせ"}</a>
       </div>
-      <div class="contact-bubbles" aria-hidden="true"></div>
-    </section>
-  </main>
+    </div>
+    <div class="contact-bubbles" aria-hidden="true"></div>
+  </section>
+</main>

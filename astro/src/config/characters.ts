@@ -15,27 +15,25 @@ export type Character = {
   };
 };
 
-// キャラクターが未公開の間は空配列のままにしてください。
-// 1人以上追加すると、Coming Soon表示からキャラクターカードへ自動で切り替わります。
+// 本格始動前は空配列のままにしてください。
+// キャラクターを公開するときだけ、下のサンプルを配列内へ追加します。
 export const characters: Character[] = [];
 
-/* 追加時のサンプル
-export const characters: Character[] = [
-  {
-    id: "tokyo-luna",
-    name: "東京 ルナ",
-    reading: "とうきょう るな",
-    roleLabel: "相談コンシェルジュ",
-    role: "東京の住まい探しを支えるVTuber相談員",
-    feature: "明るく親しみやすく、希望条件を丁寧に整理",
-    consultation: "賃貸・購入・エリア選び・オンライン相談",
-    image: "/assets/images/character-profile.jpg",
-    alt: "VTuber相談員 東京ルナ",
-    socials: {
-      x: "",
-      youtube: "",
-      instagram: "",
-    },
+/*
+{
+  id: "character-01",
+  name: "キャラクター名",
+  reading: "よみがな",
+  roleLabel: "相談コンシェルジュ",
+  role: "担当する役割",
+  feature: "キャラクターの特徴",
+  consultation: "対応できる相談内容",
+  image: "/assets/images/character-01.webp",
+  alt: "VTuber相談員 キャラクター名",
+  socials: {
+    x: "",
+    youtube: "",
+    instagram: "",
   },
-];
+}
 */
