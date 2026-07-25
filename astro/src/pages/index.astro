@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LandingPage from "../components/LandingPage.astro";
+import { normalizeUrl, siteConfig } from "../config/site";
+
+const xUrl = normalizeUrl(siteConfig.xUrl);
+const youtubeUrl = normalizeUrl(siteConfig.youtubeUrl);
+const instagramUrl = normalizeUrl(siteConfig.instagramUrl);
+const hasSocials = Boolean(xUrl || youtubeUrl || instagramUrl);
+---
+<BaseLayout>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="東京VTuber不動産 トップ">
+      <span class="brand-main">東京VTuber不動産</span>
+      <span class="brand-sub">TOKYO VTUBER REAL ESTATE</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="メインナビゲーション">
+      <a href="#concept">コンセプト</a>
+      <a href="#services">ご相談内容</a>
+      <a href="#character">キャラクター</a>
+      <a href="#flow">ご利用の流れ</a>
+      <a href="#booking">相談予約</a>
+      <a href="#inquiry">お問い合わせ</a>
+    </nav>
+
+    {hasSocials && (
+      <div class="social-nav" aria-label="公式SNS">
+        {xUrl && <a href={xUrl} target="_blank" rel="noopener noreferrer" aria-label="公式X">X</a>}
+        {youtubeUrl && <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="公式YouTube">▶</a>}
+        {instagramUrl && <a href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="公式Instagram">◎</a>}
+      </div>
+    )}
+
+    <button class="menu-button" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" hidden>
+    <a href="#concept">コンセプト</a>
+    <a href="#services">ご相談内容</a>
+    <a href="#character">キャラクター</a>
+    <a href="#flow">ご利用の流れ</a>
+    <a href="#booking">相談予約</a>
+    <a href="#inquiry">お問い合わせ</a>
+  </div>
+
+  <LandingPage />
+
+  <footer>
+    <a class="brand footer-brand" href="#top">
+      <span class="brand-main">東京VTuber不動産</span>
+      <span class="brand-sub">TOKYO VTUBER REAL ESTATE</span>
+    </a>
+    <nav>
+      <a href="#concept">コンセプト</a>
+      <a href="#services">ご相談内容</a>
+      <a href="#character">キャラクター</a>
+      <a href="#flow">ご利用の流れ</a>
+      <a href="#booking">相談予約</a>
+      <a href="#inquiry">お問い合わせ</a>
+    </nav>
+    <div class="footer-meta">
+      {hasSocials && (
+        <div class="footer-social" aria-label="公式SNS">
+          {xUrl && <a href={xUrl} target="_blank" rel="noopener noreferrer" aria-label="公式X">X</a>}
+          {youtubeUrl && <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="公式YouTube">▶</a>}
+          {instagramUrl && <a href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="公式Instagram">◎</a>}
+        </div>
+      )}
+      <small>© Tokyo VTuber Real Estate.</small>
+    </div>
+  </footer>
+</BaseLayout>
