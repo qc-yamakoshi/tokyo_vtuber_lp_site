@@ -1,0 +1,42 @@
+---
+import { ga4MeasurementId } from "../config/analytics";
+
+const measurementId = ga4MeasurementId.trim();
+if (measurementId && !/^G-[A-Z0-9]+$/.test(measurementId)) {
+  throw new Error("GA4測定IDはG-で始まる実際のIDを設定してください。空欄なら無効です。");
+}
+const enabled = import.meta.env.PROD && Boolean(measurementId);
+---
+{enabled && (
+  <script is:inline define:vars={{ measurementId }}>
+    // プレビュー、localhost、別ドメインではGoogleへの通信もCookie作成もしない。
+    // 公開LP以外のパス・URL・入力値をAnalyticsへ渡さない。
+    if (
+      location.protocol === "https:" &&
+      location.hostname === "tokyo-vtuber-fudousan.com" &&
+      (location.pathname === "/" || location.pathname === "/index.html") &&
+      !location.search &&
+      !location.hash &&
+      !window.__tokyoVtuberGaInitialized
+    ) {
+      window.__tokyoVtuberGaInitialized = true;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      // configの自動page_viewのみ。別のpage_viewイベントを追加しない。
+      window.gtag("config", measurementId, {
+        send_page_view: true,
+        page_location: "https://tokyo-vtuber-fudousan.com/",
+        page_referrer: "",
+        page_title: "東京VTuber不動産｜オンライン物件相談",
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
+      const tag = document.createElement("script");
+      tag.async = true;
+      tag.referrerPolicy = "no-referrer";
+      tag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(tag);
+    }
+  </script>
+)}

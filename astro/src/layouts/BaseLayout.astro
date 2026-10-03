@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Analytics from "../components/Analytics.astro";
 const { title = "東京VTuber不動産｜オンライン物件相談", description = "東京VTuber不動産は、VTuber相談員とオンラインで話しながら物件探しができる不動産相談サービスです。" } = Astro.props;
 ---
 <!doctype html>
@@ -9,6 +10,8 @@ const { title = "東京VTuber不動産｜オンライン物件相談", descripti
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <Analytics />
   </head>
   <body>
     <slot />
