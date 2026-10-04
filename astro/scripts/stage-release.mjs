@@ -8,7 +8,7 @@ const dist = path.join(root, "dist");
 const stamp = new Date().toISOString().replace(/[:.]/g, "-");
 const release = path.join(root, "releases", `heteml-${stamp}`);
 const upload = path.join(release, "upload");
-const allowed = new Set(["index.html", "main.js", "_astro", "assets"]);
+const allowed = new Set(["index.html", "main.js", "analytics-consent.js", "analytics", "_astro", "assets"]);
 await mkdir(upload, { recursive: true });
 const manifest = [];
 async function copyTree(directory, relative = "") {
@@ -31,7 +31,7 @@ async function copyTree(directory, relative = "") {
 }
 await copyTree(dist);
 if (!manifest.some(x => x.file === "index.html") || !manifest.some(x => x.file === "main.js")) throw new Error("buildしてから実行してください");
-for (const name of ["配置手順.md", "GA4設定.md", "検証結果.md", "検証ログ.json", "htaccess-redirect.example.txt"]) {
+for (const name of ["最初に読む.txt", "配置手順.md", "GA4設定.md", "検証結果.md", "検証ログ.json", "htaccess-redirect.example.txt"]) {
   await copyFile(path.join(root, "docs", name), path.join(release, name));
 }
 await writeFile(path.join(release, "公開ファイル一覧.json"), JSON.stringify({ generatedAt: new Date().toISOString(), source: "astro/dist (CNAME除外)", files: manifest }, null, 2) + "\n");

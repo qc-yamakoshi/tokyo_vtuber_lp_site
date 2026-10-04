@@ -29,7 +29,7 @@ $env:ASTRO_TELEMETRY_DISABLED = "1"
 npm run preview -- --host 127.0.0.1
 ~~~
 
-画面だけ確認する場合、localhostではGA4タグの取得・計測は始まりません。devではタグ自体を出力しません。productionビルドは設定済みIDを含みますが、公開HTTPSドメインの通常ルートアクセスでだけ開始します。実計測の前提設定と制約はdocs/GA4設定.mdを確認してください。
+画面だけ確認する場合、localhostではGA4タグの取得・計測は始まりません。公開HTTPSのLPでも、訪問者が許可するまではタグを読み込みません。拒否・閉じるだけでは解析しません。左下の設定ボタンから変更・撤回できます。UTM・query・アンカー付き訪問も許可後に一度計測しますが、UTM/参照元の流入分析は制限されています。日本語の説明ページは `/analytics/`、設定と制約はdocs/GA4設定.mdを確認してください。
 
 ## 公開パッケージ
 
@@ -39,4 +39,4 @@ npm run releaseはbuild後にreleases/heteml-日時/を作ります。upload内�
 - docs/GA4設定.md：測定ID一か所設定、拡張計測OFF、PII対策、同意/プライバシーの残確認
 - docs/検証結果.md：更新前後のバージョン、回帰検証、残る監査指摘
 
-今回の作業はローカル準備までです。GitHub push/main merge、heteml転送、DNS、Google Workspace、Analyticsアカウント設定は行っていません。既存GitHub Pages workflowも継続しています。将来pushすると従来どおりPages配信が実行される点に注意してください。移行後のprivate化は別作業です。
+ユーザーの承認範囲は作業ブランチとdraft PRの更新までです。mainへのmerge、heteml転送、DNS、Google Workspace、Analyticsアカウント設定は行いません。既存workflowはmain pushでGitHub Pagesを配信するため、作業ブランチ公開とmain mergeは別です。移行後のprivate化も別作業です。

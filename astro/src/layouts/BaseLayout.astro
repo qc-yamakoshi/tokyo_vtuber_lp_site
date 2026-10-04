@@ -11,10 +11,10 @@ const { title = "東京VTuber不動産｜オンライン物件相談", descripti
     <meta name="description" content={description} />
     <title>{title}</title>
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
-    <Analytics />
   </head>
   <body>
     <slot />
+    <Analytics />
     <script is:inline src="/main.js"></script>
   </body>
 </html>
