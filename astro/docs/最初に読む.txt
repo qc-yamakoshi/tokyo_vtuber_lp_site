@@ -1,0 +1,10 @@
+hetemlへの配置（2026年10月4日版）
+
+1. ZIPを展開し、uploadフォルダの「中身」をドメイン公開フォルダ /vtuber_fudousan 直下へFTPSで置きます。uploadフォルダ自体は置きません。
+2. assets、_astro、analytics、main.js、analytics-consent.jsを先に、index.htmlを最後に転送します。
+3. サーバー既存の.htaccess、.well-known、SSL認証ファイルは残します。同期時の「転送元にないファイルを削除」は使いません。
+4. https://tokyo-vtuber-fudousan.com/ と /analytics/ を確認します。www転送例は参考資料です。既存.htaccessへそのまま上書きしません。
+5. GA4は訪問者が「許可する」を選んだ場合だけ開始します。測定IDはソースのsrc/config/analytics.tsに一箇所あります。
+6. 公開前にGA4の対象ストリームで拡張計測をOFFにするなど、同梱のGA4設定.mdを確認してください。実GA4管理設定・実計測は今回行っていません。
+
+配置手順.md、GA4設定.md、検証結果.mdなどは共有資料です。公開フォルダへ転送しません。DNS・Google Workspaceの設定変更は不要です。

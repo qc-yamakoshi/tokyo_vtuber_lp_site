@@ -1,0 +1,45 @@
+---
+import { ga4MeasurementId } from "../config/analytics";
+const measurementId = ga4MeasurementId.trim();
+if (measurementId && !/^G-[A-Z0-9]+$/.test(measurementId)) {
+  throw new Error("GA4測定IDはG-で始まる実際のIDを設定してください。空欄なら無効です。");
+}
+const enabled = import.meta.env.PROD && Boolean(measurementId);
+---
+<button type="button" class="analytics-settings" data-analytics-open aria-controls="analytics-panel" aria-expanded="false" hidden>アクセス解析の設定</button>
+<section id="analytics-panel" class="analytics-panel" role="dialog" aria-modal="false" aria-labelledby="analytics-heading" aria-describedby="analytics-summary" hidden>
+  <div class="analytics-panel-head">
+    <h2 id="analytics-heading" tabindex="-1">アクセス解析について</h2>
+    <button type="button" data-analytics-close aria-label="アクセス解析の設定を閉じる">閉じる</button>
+  </div>
+  <p id="analytics-summary">サイト改善のため、Google Analyticsを使用します。許可した場合だけGoogleへ閲覧情報を送信し、Cookieを利用します。拒否してもサイトはそのまま使えます。</p>
+  <p><a href="/analytics/">送信する情報・Cookie・選択の変更について</a></p>
+  <p data-analytics-status class="analytics-status" aria-live="polite"></p>
+  <div class="analytics-choices">
+    <button type="button" data-analytics-choice="denied">許可しない</button>
+    <button type="button" data-analytics-choice="granted">許可する</button>
+  </div>
+  <p class="analytics-note">後から「アクセス解析の設定」で変更できます。許可を取り消すと、GA Cookieを削除してページを再読み込みします。</p>
+</section>
+<noscript><p class="analytics-noscript">JavaScriptが無効なためアクセス解析は行いません。<a href="/analytics/">アクセス解析について</a></p></noscript>
+<script is:inline define:vars={{ measurementId, enabled }}>
+  window.__tokyoVtuberAnalyticsConfig = { measurementId, enabled };
+</script>
+<script is:inline src="/analytics-consent.js"></script>
+<style>
+  .analytics-settings {position:fixed;bottom:16px;left:16px;z-index:80;padding:10px 14px;border:1px solid #b3d9ee;border-radius:8px;background:#fff;color:#173a61;font:inherit;font-size:12px;cursor:pointer;box-shadow:0 2px 14px #14395c18;}
+  .analytics-panel {position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:100;width:min(720px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;padding:22px 24px;background:#fff;border:1px solid #b3d9ee;border-radius:14px;box-shadow:0 12px 48px #14395c30;color:#173a61;font-family:inherit;text-align:left;}
+  .analytics-panel[hidden],.analytics-settings[hidden] {display:none;}
+  .analytics-panel-head {display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .analytics-panel h2 {margin:0;font-size:18px;line-height:1.5;}
+  .analytics-panel p {margin:12px 0 0;font-size:14px;line-height:1.8;}
+  .analytics-panel a {color:#006fa9;text-decoration:underline;text-underline-offset:3px;}
+  .analytics-panel-head button {flex-shrink:0;border:1px solid #b3d9ee;border-radius:6px;padding:7px 10px;background:#fff;color:#173a61;font:inherit;font-size:12px;cursor:pointer;}
+  .analytics-choices {display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
+  .analytics-choices button {min-height:46px;border:2px solid #0d79b5;border-radius:8px;background:#fff;color:#005d91;font:inherit;font-weight:700;cursor:pointer;}
+  .analytics-choices button:hover {background:#eff9ff;}
+  .analytics-panel .analytics-note,.analytics-panel .analytics-status {font-size:12px;color:#45627c;}
+  .analytics-panel button:focus-visible,.analytics-panel a:focus-visible,.analytics-settings:focus-visible {outline:3px solid #0078bc;outline-offset:3px;}
+  .analytics-noscript {padding:16px;text-align:center;font-size:13px;}
+  @media(max-width:480px) {.analytics-panel {padding:18px 16px;bottom:12px;width:calc(100% - 24px);} .analytics-panel h2 {font-size:17px;} .analytics-panel p {font-size:13px;} .analytics-choices {gap:10px;} .analytics-settings {bottom:12px;left:12px;}}
+</style>

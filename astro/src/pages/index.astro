@@ -33,10 +33,10 @@ const socialLinks = [
         ))}
       </div>
     )}
-    <button class="menu-button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="menu-button" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
   </header>
 
-  <div class="mobile-menu" hidden>
+  <div id="mobile-menu" class="mobile-menu" hidden>
     <a href="#concept">コンセプト</a>
     <a href="#services">ご相談内容</a>
     <a href="#character">キャラクター</a>
@@ -61,6 +61,7 @@ const socialLinks = [
       <a href="#inquiry">お問い合わせ</a>
     </nav>
     <div class="footer-meta">
+      <a href="/analytics/">アクセス解析について</a>
       {socialLinks.length > 0 && (
         <div class="footer-social" aria-label="公式SNS">
           {socialLinks.map((item) => (

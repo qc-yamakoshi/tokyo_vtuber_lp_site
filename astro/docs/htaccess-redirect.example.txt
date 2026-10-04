@@ -1,0 +1,14 @@
+# 将来の統合例。公開ZIPのuploadには含めない。
+# 既存.htaccessをバックアップし、既存ルールを確認して必要な箇所へ統合する。
+# apex/www両方のSSLが有効であることが前提。DNS/SSL設定はこのファイルでは変更できない。
+RewriteEngine On
+
+# SSL認証用パスは既存hetemlルールを優先し、この転送例では除外する。
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteCond %{HTTP_HOST} ^www\.tokyo-vtuber-fudousan\.com$ [NC]
+RewriteRule ^ https://tokyo-vtuber-fudousan.com%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteCond %{HTTP_HOST} ^tokyo-vtuber-fudousan\.com$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://tokyo-vtuber-fudousan.com%{REQUEST_URI} [R=301,L]

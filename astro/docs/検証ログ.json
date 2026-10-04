@@ -1,0 +1,1502 @@
+{
+  "completedAt": "2026-10-04T01:33:32.733262+00:00",
+  "baselineMain": "4f24b113fe31dd63694f9fe46f7bfbd8f6176a14",
+  "node": "24.18.0",
+  "npm": "11.16.0",
+  "astro": "7.3.5",
+  "check": {
+    "files": 15,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0
+  },
+  "build": {
+    "completedAt": "2026-10-04T01:26:49.303Z",
+    "results": [
+      {
+        "test": "empty-id-no-tag",
+        "passed": true
+      },
+      {
+        "test": "invalid-id-rejected",
+        "passed": true
+      },
+      {
+        "test": "repeat-build-byte-identical",
+        "files": 13,
+        "passed": true
+      }
+    ],
+    "hashes": {
+      "_astro/BaseLayout.D7HxVhF6.css": "8e5e5ee08615b1f2e888f90f2e6c537082197d371e1171b55aed6bff781f4c3b",
+      "analytics/index.html": "bf47b6de0ac7228afae2bf76aa014621301dcf3136f0eb4bc6fcea3fc2579995",
+      "analytics-consent.js": "b41d19cd87cc493cfa9253f28519d379f9a04a84e7755ac3bc21d103c4f647f5",
+      "assets/images/card-area.jpg": "e50148360f972955b5056028b4d061e11ea042a037324f0eee96eab5a69ea796",
+      "assets/images/card-knowledge.jpg": "436cb624f6f0364bac877e7f3078abf7136626e7f36907a47fc93b765bda6c1c",
+      "assets/images/card-live.jpg": "db7daf19ac68acc38dce3d1f2000e612de1c0828867ab444b89dee0338c0eab7",
+      "assets/images/card-property.jpg": "27c4c2a151ae866fc3afee5e6ff5887dc9a01967488e1a7091d2addfc0276d3d",
+      "assets/images/concept-city.jpg": "30efd228673387252b01c0215cab8f45a900bc11d2cdd611d24ec092b37e674b",
+      "assets/images/hero-character.png": "5827332dfdc81977e8e4ff4adff74e9cd58d254d3ae2b6d4e834e1d38d44c08c",
+      "assets/images/hero-coming-soon.png": "7d2084edf902fa6ce6f3ac034e7bccf8f4815da0c14106c1515d1f0de2409c50",
+      "CNAME/tokyo-vtuber-fudousan.com": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "index.html": "f5808c9f2d5cc83cc6a1ff42f1a0a0a90040ab3c9de47af99c73d2c5eade43a8",
+      "main.js": "30b071785c1ec783e90318fe2427a94db1c30a11c324480660913f0a17512f59"
+    }
+  },
+  "browser": {
+    "completedAt": "2026-10-04T01:32:28.631Z",
+    "browser": "154.0.4258.53",
+    "safety": "Google tag replaced with a local fixture; all fake Google collection requests intercepted and fulfilled locally; no actual Analytics traffic. Tests assert transport counts plus config inputs, not real GA reports.",
+    "results": [
+      {
+        "test": "layout-keyboard-consent",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "layout": {
+          "w": 1440,
+          "scroll": 1440,
+          "broken": [],
+          "missingAlt": 0,
+          "anchors": [],
+          "h1": 1,
+          "main": 1,
+          "lang": "ja",
+          "comingSoon": 3
+        },
+        "choices": [
+          {
+            "w": 329,
+            "h": 46,
+            "color": "rgb(0, 93, 145)",
+            "bg": "rgb(255, 255, 255)"
+          },
+          {
+            "w": 329,
+            "h": 46,
+            "color": "rgb(0, 93, 145)",
+            "bg": "rgb(255, 255, 255)"
+          }
+        ],
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "layout-keyboard-consent",
+        "viewport": {
+          "width": 800,
+          "height": 900
+        },
+        "layout": {
+          "w": 800,
+          "scroll": 800,
+          "broken": [],
+          "missingAlt": 0,
+          "anchors": [],
+          "h1": 1,
+          "main": 1,
+          "lang": "ja",
+          "comingSoon": 3
+        },
+        "choices": [
+          {
+            "w": 329,
+            "h": 46,
+            "color": "rgb(0, 93, 145)",
+            "bg": "rgb(255, 255, 255)"
+          },
+          {
+            "w": 329,
+            "h": 46,
+            "color": "rgb(0, 93, 145)",
+            "bg": "rgb(255, 255, 255)"
+          }
+        ],
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "layout-keyboard-consent",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "layout": {
+          "w": 390,
+          "scroll": 390,
+          "broken": [],
+          "missingAlt": 0,
+          "anchors": [],
+          "h1": 1,
+          "main": 1,
+          "lang": "ja",
+          "comingSoon": 3
+        },
+        "choices": [
+          {
+            "w": 161,
+            "h": 46,
+            "color": "rgb(0, 93, 145)",
+            "bg": "rgb(255, 255, 255)"
+          },
+          {
+            "w": 161,
+            "h": 46,
+            "color": "rgb(0, 93, 145)",
+            "bg": "rgb(255, 255, 255)"
+          }
+        ],
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "layout-keyboard-consent",
+        "viewport": {
+          "width": 360,
+          "height": 800
+        },
+        "layout": {
+          "w": 360,
+          "scroll": 360,
+          "broken": [],
+          "missingAlt": 0,
+          "anchors": [],
+          "h1": 1,
+          "main": 1,
+          "lang": "ja",
+          "comingSoon": 3
+        },
+        "choices": [
+          {
+            "w": 146,
+            "h": 46,
+            "color": "rgb(0, 93, 145)",
+            "bg": "rgb(255, 255, 255)"
+          },
+          {
+            "w": 146,
+            "h": 46,
+            "color": "rgb(0, 93, 145)",
+            "bg": "rgb(255, 255, 255)"
+          }
+        ],
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:09.667Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/index.html",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/index.html",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/index.html",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:12.848Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/?email=qa%40example.invalid",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:16.034Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/?unknown=qa-secret-fixture",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:19.254Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/?utm_source=qa-fixture&utm_medium=qa-test&utm_campaign=qa-campaign",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:22.515Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/?utm_source=qa%40example.invalid&utm_term=qa-secret-fixture&gclid=qa-secret-fixture",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:25.711Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/?email=qa%2540example.invalid&email=second-private-fixture&phone=0000000000#services",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/#services",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/#services",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:28.814Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/index.html?unknown=qa-secret-fixture#concept",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/index.html#concept",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/index.html#concept",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:32.728Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/#services",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/#services",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/#services",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:36.637Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/#%73ervices",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/#services",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/#services",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:40.534Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/#qa-private-fixture",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:44.437Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/#qa%40example.invalid",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:47.634Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "opt-in-url-single-page-view",
+        "initialUrl": "https://tokyo-vtuber-fudousan.com/#%E0%A4%A",
+        "snapshot": {
+          "url": "https://tokyo-vtuber-fudousan.com/",
+          "tagUrl": "https://tokyo-vtuber-fudousan.com/",
+          "state": {
+            "qa": "preserved"
+          },
+          "len": 2,
+          "before": 2,
+          "events": []
+        },
+        "queue": [
+          [
+            "consent",
+            "default",
+            {
+              "analytics_storage": "granted",
+              "ad_storage": "denied",
+              "ad_user_data": "denied",
+              "ad_personalization": "denied"
+            }
+          ],
+          [
+            "js",
+            "2026-10-04T01:30:50.851Z"
+          ],
+          [
+            "config",
+            "G-65TGMY9D0G",
+            {
+              "send_page_view": true,
+              "page_location": "https://tokyo-vtuber-fudousan.com/",
+              "page_referrer": "",
+              "page_title": "東京VTuber不動産｜オンライン物件相談",
+              "cookie_domain": "tokyo-vtuber-fudousan.com",
+              "cookie_path": "/",
+              "allow_google_signals": false,
+              "allow_ad_personalization_signals": false
+            }
+          ]
+        ],
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "environment-scope-no-analytics",
+        "url": "http://tokyo-vtuber-fudousan.com/",
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "environment-scope-no-analytics",
+        "url": "https://www.tokyo-vtuber-fudousan.com/",
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "environment-scope-no-analytics",
+        "url": "https://preview.example.invalid/",
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "environment-scope-no-analytics",
+        "url": "https://tokyo-vtuber-fudousan.com/qa-other-path",
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "environment-scope-no-analytics",
+        "url": "https://tokyo-vtuber-fudousan.com/analytics/",
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "deny-persistence-cookie-cleanup-site-unrestricted",
+        "cookies": [
+          {
+            "name": "other_preference",
+            "value": "keep",
+            "domain": "tokyo-vtuber-fudousan.com",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "Lax"
+          }
+        ],
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "allowed-revisit-withdrawal-network-cookie-stop",
+        "pageViews": 2,
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            },
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            },
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "storage-unavailable-or-invalid-no-implicit-consent",
+        "options": {
+          "storageBlocked": true
+        },
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "storage-unavailable-or-invalid-no-implicit-consent",
+        "options": {
+          "saved": "{\"v\":99,\"choice\":\"granted\"}"
+        },
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "storage-unavailable-or-invalid-no-implicit-consent",
+        "options": {
+          "saved": "malformed"
+        },
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "url-normalization-failure-explicit-stop",
+        "options": {
+          "failNormalization": true
+        },
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "url-normalization-failure-explicit-stop",
+        "options": {
+          "ignoreNormalization": true
+        },
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "duplicate-script-history-query-anchor-path-safe",
+        "pageViews": 1,
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "cross-tab-withdrawal",
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [
+            {
+              "url": "https://www.google-analytics.com/g/collect?en=page_view&tid=G-65TGMY9D0G&dl=https%3A%2F%2Ftokyo-vtuber-fudousan.com%2F&dr=",
+              "payload": {
+                "en": "page_view",
+                "tid": "G-65TGMY9D0G",
+                "dl": "https://tokyo-vtuber-fudousan.com/",
+                "dr": ""
+              }
+            }
+          ],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "withdrawal-while-tag-pending",
+        "traffic": {
+          "tags": [
+            {
+              "url": "https://www.googletagmanager.com/gtag/js?id=G-65TGMY9D0G",
+              "referrer": ""
+            }
+          ],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "explanation-page-and-return-link",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "explanation-page-and-return-link",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "javascript-disabled-no-analytics",
+        "traffic": {
+          "tags": [],
+          "collect": [],
+          "unexpected": [],
+          "failed": [],
+          "errors": [],
+          "badResponses": [],
+          "cancelled": []
+        },
+        "passed": true
+      },
+      {
+        "test": "single-measurement-id",
+        "passed": true
+      }
+    ]
+  },
+  "audit": {
+    "high": 2,
+    "critical": 0,
+    "moderate": 0,
+    "low": 0,
+    "info": 0,
+    "advisory": "GHSA-ch52-4w7c-c8xp",
+    "affected": [
+      "astro",
+      "http-cache-semantics"
+    ],
+    "note": "No fixed compatible version offered; no force downgrade. Node dependencies excluded from static upload."
+  },
+  "limitations": [
+    "Actual Google Analytics payload and reports not tested.",
+    "GA property/stream/enhanced-measurement settings not inspected or changed.",
+    "UTM, ad click identifiers and referrer attribution omitted.",
+    "Desktop browser mobile emulation, not a physical mobile-device test."
+  ],
+  "scope": {
+    "serverUpload": false,
+    "dnsOrGwsChanged": false,
+    "mainMerged": false,
+    "repositoryVisibilityChanged": false,
+    "actualAnalyticsTraffic": false
+  }
+}
